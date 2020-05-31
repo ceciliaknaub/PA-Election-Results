@@ -1,3 +1,6 @@
+#Open jpeg file
+jpeg("2016-General", width = 500, height = 800)
+
 #Plot 2016 General Election Results by County
 ggplot(Final_Presidential_Results_2016_General) +
   geom_segment( aes(x=county, xend=county, y=Dem_Percent_Vote, yend=Rep_Percent_Vote), color="grey") +
@@ -8,3 +11,6 @@ ggplot(Final_Presidential_Results_2016_General) +
        subtitle = "Year: 2016 General",
                      x = NULL, 
                      y = 'Percent of Total Vote')
+#Close file
+dev.off()
+
